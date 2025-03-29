@@ -297,15 +297,16 @@ saveHabitBtn.addEventListener('click', async () => {
         alert('Please enter a habit name');
         return;
     }
+    await createHabit(name, frequency, formatDate(new Date()));
+    habitModal.style.display = 'none';
+    await renderHabits();
+});
 
-    try {
-        await createHabit(name, frequency, formatDate(new Date()));
-        habitModal.style.display = 'none'; // Close the modal here
-        await renderHabits();
-    } catch (error) {
-        // Handle error from createHabit (if necessary)
-        console.error('Error in saveHabitBtn:', error);
-        alert('An error occurred while saving habit. See console for details.');
+// Event delegation for vote button clicks
+habitList.addEventListener('click', (e) => {
+    if (e.target.classList.contains('vote-btn')) {
+        const habitName = e.target.getAttribute('data-name');
+        voteForHabit(habitName);
     }
 });
 
