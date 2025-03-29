@@ -74,26 +74,9 @@ const habitNameInput = document.getElementById('habit-name');
 const habitFrequencyInput = document.getElementById('habit-frequency');
 const modalTitle = document.getElementById('modal-title');
 
-// Update the display of the Today button based on selected date
-function updateTodayButton() {
-  const today = new Date();
-  const todayStr = formatDate(today);
-  const selectedStr = formatDate(selectedDate);
-  
-  // If viewing a day other than today, enable and highlight the button.
-  if (todayStr !== selectedStr) {
-    todayBtn.disabled = false;
-    todayBtn.classList.add("active");
-  } else {
-    todayBtn.disabled = true;
-    todayBtn.classList.remove("active");
-  }
-}
-
 // Display the currently selected date
 function updateDateDisplay() {
   currentDateSpan.textContent = formatDate(selectedDate);
-  updateTodayButton();
 }
 
 // Load habits from localStorage
