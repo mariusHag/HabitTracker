@@ -1,6 +1,6 @@
 // Notion API Configuration
-const notionApiKey = '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'; // Replace with your Notion API key
-const notionDatabaseId = '1c5a27163198800b9a01e5d69cc3d368'; // Replace with your database ID
+const notionApiKey = 'YOUR_NOTION_API_KEY'; // Replace with your Notion API key
+const notionDatabaseId = 'YOUR_DATABASE_ID'; // Replace with your database ID
 
 // Utility functions
 function formatDate(date) {
