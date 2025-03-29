@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <html lang="en"> 
+            <link href="style.css" rel="stylesheet" type="text/css">
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Design Services</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Habit Tracker</h1>
+            <div id="habit-list"></div>
+            <button id="add-habit-btn">Add Habit</button>
+        </div>
+        <div id="habit-modal" class="modal">
+            <div class="modal-content">
+                <span id="close-modal-btn" class="close-btn">&times;</span>
+                <h2 id="modal-title">Add Habit</h2>
+                <input type="text" id="habit-name" placeholder="Habit Name">
+                <select id="habit-frequency">
+                    <option value="daily">Daily</option>
+                    <option value="every-second-day">Every Second Day</option>
+                </select>
+                <button id="save-habit-btn">Save Habit</button>
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
